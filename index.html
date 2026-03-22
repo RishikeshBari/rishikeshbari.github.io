@@ -1,362 +1,466 @@
 <!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Dimension by HTML5 UP</title>
+		<title>Rishikesh Bari | Data Analyst</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Portfolio of Rishikesh Bari — Data Analyst skilled in SQL, Tableau, Python and Excel." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* ── Custom overrides on top of Dimension's base CSS ── */
+
+			/* Accent colour used for highlights & hover */
+			:root {
+				--accent: #4fc3f7;
+				--accent-dark: #0288d1;
+			}
+
+			/* Slightly larger hero name */
+			#header h1 {
+				font-size: 2.8rem;
+				letter-spacing: 0.12em;
+			}
+
+			/* Tagline under name */
+			#header .tagline {
+				font-size: 0.85rem;
+				letter-spacing: 0.22em;
+				text-transform: uppercase;
+				color: rgba(255,255,255,0.55);
+				margin-top: -1rem;
+				margin-bottom: 1.4rem;
+			}
+
+			/* Nav button hover accent */
+			#header nav ul li a:hover {
+				border-color: var(--accent);
+				color: var(--accent);
+			}
+
+			/* Article headings */
+			#main article header h2.major {
+				font-size: 1.5rem;
+				letter-spacing: 0.12em;
+			}
+
+			/* Skills grid */
+			.skills-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1.2rem;
+				margin-top: 1rem;
+			}
+			.skill-group h4 {
+				font-size: 0.7rem;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: var(--accent);
+				margin-bottom: 0.5rem;
+				border-bottom: 1px solid rgba(79,195,247,0.25);
+				padding-bottom: 0.3rem;
+			}
+			.skill-group p {
+				font-size: 0.85rem;
+				color: rgba(255,255,255,0.75);
+				margin: 0;
+				line-height: 1.7;
+			}
+
+			/* Project cards */
+			.project-card {
+				background: rgba(255,255,255,0.04);
+				border: 1px solid rgba(255,255,255,0.1);
+				border-radius: 6px;
+				padding: 1.2rem 1.4rem;
+				margin-bottom: 1.2rem;
+				transition: border-color 0.2s;
+			}
+			.project-card:hover {
+				border-color: var(--accent);
+			}
+			.project-card .tag-row {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 6px;
+				margin-bottom: 0.7rem;
+			}
+			.project-card .tag {
+				font-size: 0.68rem;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				background: rgba(79,195,247,0.12);
+				color: var(--accent);
+				padding: 3px 10px;
+				border-radius: 20px;
+				border: 1px solid rgba(79,195,247,0.25);
+			}
+			.project-card h3 {
+				font-size: 1rem;
+				margin: 0 0 0.5rem;
+				color: #fff;
+			}
+			.project-card p {
+				font-size: 0.84rem;
+				color: rgba(255,255,255,0.68);
+				margin-bottom: 0.8rem;
+				line-height: 1.7;
+			}
+			.project-card .highlight {
+				font-size: 0.8rem;
+				color: rgba(255,255,255,0.5);
+				border-left: 2px solid var(--accent);
+				padding-left: 0.7rem;
+				margin-bottom: 1rem;
+				font-style: italic;
+			}
+			.project-card a.btn-link {
+				font-size: 0.75rem;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+				color: var(--accent);
+				border-bottom: 1px solid rgba(79,195,247,0.4);
+				text-decoration: none;
+				transition: border-color 0.2s;
+			}
+			.project-card a.btn-link:hover {
+				border-color: var(--accent);
+			}
+
+			/* Contact info rows */
+			.contact-row {
+				display: flex;
+				align-items: center;
+				gap: 0.9rem;
+				margin-bottom: 1rem;
+				font-size: 0.9rem;
+				color: rgba(255,255,255,0.75);
+			}
+			.contact-row .icon-wrap {
+				width: 36px;
+				height: 36px;
+				border: 1px solid rgba(255,255,255,0.15);
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-shrink: 0;
+				font-size: 1rem;
+			}
+			.contact-row a {
+				color: var(--accent);
+				text-decoration: none;
+			}
+			.contact-row a:hover { text-decoration: underline; }
+
+			/* Resume section */
+			.resume-box {
+				background: rgba(255,255,255,0.04);
+				border: 1px solid rgba(255,255,255,0.1);
+				border-radius: 6px;
+				padding: 1.4rem 1.6rem;
+				text-align: center;
+				margin-top: 1rem;
+			}
+			.resume-box p {
+				font-size: 0.88rem;
+				color: rgba(255,255,255,0.65);
+				margin-bottom: 1.2rem;
+			}
+
+			@media screen and (max-width: 480px) {
+				.skills-grid { grid-template-columns: 1fr; }
+				#header h1 { font-size: 2rem; }
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
+			<!-- Header -->
+			<header id="header">
+				<div class="logo">
+					<!-- Initials circle instead of icon -->
+					<span style="font-size:1.3rem; font-weight:700; letter-spacing:0.05em;">RB</span>
+				</div>
+				<div class="content">
+					<div class="inner">
+						<h1>Rishikesh Bari</h1>
+						<p class="tagline">Data Analyst &nbsp;·&nbsp; SQL &nbsp;·&nbsp; Tableau &nbsp;·&nbsp; Python</p>
+						<p>Turning raw data into decisions that actually matter.</p>
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#about">About</a></li>
+						<li><a href="#skills">Skills</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#resume">Resume</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Main -->
+			<div id="main">
+
+				<!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+				<article id="about">
+					<h2 class="major">About Me</h2>
+					<span class="image main"><img src="images/pic01.jpg" alt="Rishikesh Bari" /></span>
+
+					<p>
+						I'm a Data Analyst with 3 years of hands-on experience at EbixCash, where I worked
+						at the intersection of data and software — writing SQL queries, designing database
+						schemas, and digging into production logs to find patterns that saved teams hours
+						every week.
+					</p>
+					<p>
+						My background in software development gives me something most analysts don't have:
+						I understand how data is <em>built</em>, <em>stored</em>, and <em>moved</em> —
+						not just how to query it. That means I can work with engineers, speak to business
+						teams, and deliver insights that are both technically sound and actually useful.
+					</p>
+					<p>
+						I work with SQL, Python, Tableau, and Excel — and I'm currently deepening my
+						data skills through Scaler's programme (graduating 2026).
+					</p>
+					<p>
+						I'm looking for a Data Analyst role where I can bring both analytical thinking
+						and engineering discipline to a team that takes data seriously.
+					</p>
+
+					<ul class="icons" style="margin-top:1.5rem;">
+						<li>
+							<a href="https://github.com/RishikeshBari" target="_blank"
+							   class="icon brands fa-github" title="GitHub">
+								<span class="label">GitHub</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://linkedin.com/in/rishikesh-bari-b54aa5148/" target="_blank"
+							   class="icon brands fa-linkedin" title="LinkedIn">
+								<span class="label">LinkedIn</span>
+							</a>
+						</li>
+						<li>
+							<a href="mailto:rishikbari744@gmail.com"
+							   class="icon solid fa-envelope" title="Email">
+								<span class="label">Email</span>
+							</a>
+						</li>
+					</ul>
+				</article>
+
+				<!-- ═══════════════════════════════ SKILLS ═══════════════════════════════ -->
+				<article id="skills">
+					<h2 class="major">Skills</h2>
+
+					<div class="skills-grid">
+						<div class="skill-group">
+							<h4>Data Analysis &amp; Visualisation</h4>
+							<p>Tableau · Excel · Pivot Tables · RFM Analysis · Matplotlib · Seaborn</p>
 						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Dimension</h1>
-								<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
-							</div>
+						<div class="skill-group">
+							<h4>Databases &amp; SQL</h4>
+							<p>SQL (Oracle) · Relational Schema Design · Query Optimisation · Indexing</p>
 						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-							</article>
-
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
-
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
-							</article>
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
-
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-								<section>
-									<h3 class="major">Lists</h3>
-
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
-
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
+						<div class="skill-group">
+							<h4>Programming</h4>
+							<p>Python · Python Libraries (Pandas, NumPy) · Java</p>
+						</div>
+						<div class="skill-group">
+							<h4>Professional</h4>
+							<p>Root Cause Analysis · Business Requirement Gathering · Data Storytelling · Spring Boot (POC)</p>
+						</div>
 					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+					<p style="margin-top:1.8rem; font-size:0.82rem; color:rgba(255,255,255,0.45); text-align:center; letter-spacing:0.08em;">
+						Currently expanding · Scaler Data Science Programme 2026
+					</p>
+				</article>
+
+				<!-- ═══════════════════════════════ PROJECTS ═══════════════════════════════ -->
+				<article id="projects">
+					<h2 class="major">Projects</h2>
+
+					<!-- Project 1 -->
+					<div class="project-card">
+						<div class="tag-row">
+							<span class="tag">Tableau</span>
+							<span class="tag">LOD Expressions</span>
+							<span class="tag">Data Visualisation</span>
+						</div>
+						<h3>E-Commerce Sales Performance Dashboard</h3>
+						<p>
+							An interactive Tableau dashboard tracking sales, profit margins, and regional
+							performance across product categories — the kind of view that replaces
+							30 minutes of weekly Excel refreshing.
+						</p>
+						<p class="highlight">
+							Used LOD expressions to surface that 3 product categories drive ~40% of
+							revenue — insights that directly pointed at inventory and discount strategy gaps.
+						</p>
+						<a class="btn-link"
+						   href="https://public.tableau.com/shared/27MZ5FHM2?:display_count=n&:origin=viz_share_link"
+						   target="_blank">
+							View Live Dashboard &rarr;
+						</a>
+					</div>
+
+					<!-- Project 2 -->
+					<div class="project-card">
+						<div class="tag-row">
+							<span class="tag">Excel</span>
+							<span class="tag">Pivot Tables</span>
+							<span class="tag">Customer Analytics</span>
+						</div>
+						<h3>RFM Customer Segmentation</h3>
+						<p>
+							Full RFM (Recency, Frequency, Monetary) analysis on 10,000+ customer records —
+							entirely in Excel using pivot tables and custom scoring logic — segmenting
+							customers into Champions, At-Risk, and Churned groups.
+						</p>
+						<p class="highlight">
+							Top 20% of customers drove the majority of revenue. Built a retention playbook
+							with specific actions for each segment. (In progress — full write-up coming soon.)
+						</p>
+						<a class="btn-link" href="#projects">In Progress &rarr;</a>
+					</div>
+
+					<!-- Project 3 -->
+					<div class="project-card">
+						<div class="tag-row">
+							<span class="tag">HTML</span>
+							<span class="tag">CSS</span>
+							<span class="tag">JavaScript</span>
+							<span class="tag">GitHub Pages</span>
+						</div>
+						<h3>Habit Tracker Web App</h3>
+						<p>
+							A personal productivity web app to track daily habits — built and deployed
+							entirely by myself using vanilla web technologies and hosted live on GitHub Pages.
+						</p>
+						<p class="highlight">
+							Proof that I can take an idea from concept to a live, working product —
+							not just analyse data, but build things end to end.
+						</p>
+						<a class="btn-link"
+						   href="https://rishikeshbari.github.io/habit-tracker"
+						   target="_blank">
+							View Live App &rarr;
+						</a>
+					</div>
+				</article>
+
+				<!-- ═══════════════════════════════ RESUME ═══════════════════════════════ -->
+				<article id="resume">
+					<h2 class="major">Resume</h2>
+
+					<p style="color:rgba(255,255,255,0.7); font-size:0.9rem; line-height:1.8;">
+						3 years at EbixCash as a Data Analyst / Software Developer — writing and tuning
+						SQL queries, designing relational schemas, conducting root-cause analysis on
+						production incidents, and translating business needs into backend logic.
+					</p>
+
+					<div class="resume-box">
+						<p>Want the full picture? Download my resume for complete experience, skills, and education details.</p>
+						<a href="assets/resume.pdf" download class="button primary icon solid fa-download">
+							&nbsp; Download Resume
+						</a>
+					</div>
+
+					<p style="margin-top:1.4rem; font-size:0.78rem; color:rgba(255,255,255,0.35); text-align:center;">
+						<!-- IMPORTANT: Add your resume PDF inside the assets/ folder and name it resume.pdf -->
+						Last updated: 2025
+					</p>
+				</article>
+
+				<!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+				<article id="contact">
+					<h2 class="major">Let's Connect</h2>
+
+					<p style="color:rgba(255,255,255,0.65); font-size:0.9rem; margin-bottom:1.6rem;">
+						Whether you're hiring, collaborating, or just want to talk data —
+						I'd love to hear from you.
+					</p>
+
+					<div class="contact-row">
+						<div class="icon-wrap">✉</div>
+						<span>
+							<a href="mailto:rishikbari744@gmail.com">rishikbari744@gmail.com</a>
+						</span>
+					</div>
+
+					<div class="contact-row">
+						<div class="icon-wrap">in</div>
+						<span>
+							<a href="https://linkedin.com/in/rishikesh-bari-b54aa5148/" target="_blank">
+								linkedin.com/in/rishikesh-bari-b54aa5148/
+							</a>
+						</span>
+					</div>
+
+					<div class="contact-row">
+						<div class="icon-wrap">
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+							     style="display:block;">
+								<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+								         0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+								         -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
+								         .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
+								         -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27
+								         .68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12
+								         .51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+								         0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+							</svg>
+						</div>
+						<span>
+							<a href="https://github.com/RishikeshBari" target="_blank">
+								github.com/RishikeshBari
+							</a>
+						</span>
+					</div>
+
+					<ul class="icons" style="margin-top:2rem;">
+						<li>
+							<a href="https://linkedin.com/in/rishikesh-bari-b54aa5148/" target="_blank"
+							   class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a>
+						</li>
+						<li>
+							<a href="https://github.com/RishikeshBari" target="_blank"
+							   class="icon brands fa-github"><span class="label">GitHub</span></a>
+						</li>
+						<li>
+							<a href="mailto:rishikbari744@gmail.com"
+							   class="icon solid fa-envelope"><span class="label">Email</span></a>
+						</li>
+					</ul>
+				</article>
 
 			</div>
 
+			<!-- Footer -->
+			<footer id="footer">
+				<p class="copyright">
+					&copy; Rishikesh Bari &nbsp;·&nbsp;
+					<a href="https://rishikeshbari.github.io">rishikeshbari.github.io</a>
+				</p>
+			</footer>
+
+		</div>
+
 		<!-- BG -->
-			<div id="bg"></div>
+		<div id="bg"></div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
